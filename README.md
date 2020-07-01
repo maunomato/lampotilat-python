@@ -1,5 +1,5 @@
 #ilmatieteenlaitoksen sää-skripti python
 ensimmäinen "nopeasti" toteutettu versio -> sekava
 
-![Image of how to use](https://github.com/maunomato/lampotilat-python/blob/master/python-saa-screencapture.webm)
+![Image of how to use](https://raw.githubusercontent.com/maunomato/lampotilat-python/master/python-saa-screencapture.webm)
 
