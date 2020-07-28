@@ -30,6 +30,8 @@ def haeLampotilaITL(paikka_koodi):
 def lueKannasta():
 	onnistuneetHaut = 0
 	print('===================================================')
+	print('Lämpötilat (',datetime.datetime.now(),")")
+	print('===================================================')
 	for row in c.execute('SELECT * FROM paikkakunnat ORDER BY kunta'):
 		#print(f'{row[0]}\t\t\t\t{haeLampotilaITL(row[1])}C')
 		lampotila = haeLampotilaITL(row[1])
@@ -50,7 +52,12 @@ def tyhjennaTaulu():
 	conn.commit()
 
 def syottoLuuppi():
-	tyhjennaTaulu()
+	haluatkoTyhjentaa = input("Tyhjennätkö aiemmin tallennetut asemat (K)yllä / muuten ei: ")
+
+	if haluatkoTyhjentaa.lower()=="k":
+		tyhjennaTaulu()
+		print('Vanhat asemat tyhjennetty kannasta.')
+
 	while True:
 		vaihtoehdot = 0
 		paikat = []
@@ -76,7 +83,7 @@ def syottoLuuppi():
 
 		if kysely:
 			print('---------------------------------------------------')
-			value = input('Lisää numero: ')
+			value = input('Lisää asema numero / (x) lopettaa: ')
 			if value > str(0) and value <= str(vaihtoehdot):
 				lisaaKantaan(paikat[int(value)-1])
 			elif(value.lower() == "x"):
