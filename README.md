@@ -1,5 +1,10 @@
-#ilmatieteenlaitoksen sää-skripti python
-ensimmäinen "nopeasti" toteutettu versio -> sekava
+# sää-skripti python
+ensimmäinen "nopeasti" toteutettu versio -> sekavaa koodia, mutta todennäköisesti riittävä koulun kurssin läpäisemiseksi.
 
-![Image of how to use](https://raw.githubusercontent.com/maunomato/lampotilat-python/master/python-saa-screencapture.webm)
+TODO:
+- Omaan jatkokehitysversioon automaattinen sääasemien hakeminen (esim. beautifulsoup)
+- Selkeämpi koodi
+- käynnistys args, kuten suoraan tietyn (tai useamman) sääaseman tiedon haku
 
+
+![Image of how to use](https://i.ibb.co/Yj7B5gx/python-saa-screencapture.gif)
