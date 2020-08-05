@@ -6,7 +6,7 @@ import datetime
 
 logitiedosto = 'tapahtumat.log'
 tietokanta = 'haettavatasemat.db'
-asematcsv = 'sää-asemat-ilmatieteenlaitos.csv'
+asematcsv = 'havaintoasemat-autom.csv'
 
 f = open(logitiedosto, "a")
 conn = sqlite3.connect(tietokanta)
@@ -96,12 +96,12 @@ def syottoLuuppi():
 				loggeri(f'Hakuvirhe: {haku} ei löytynyt havaintoasemia')
 
 # kyselyt
-value = input("haluatko muuttaa seurattavia paikkakuntia? (K)yllä / muuten ei: ")
+value = input("haluatko muuttaa seurattavia paikkakuntia?\n(K)yllä / muuten ei: ")
 if(value.lower() == "k"):
 	print('Kirjoita "X" lopettaksesi paikkakuntien lisäämisen\n')
 	syottoLuuppi()
 
-value = input("haluatko hakea lämpötilatiedon ilmatieteenlaitokselta? (K)yllä / muuten ei: ")
+value = input("haluatko hakea lämpötilatiedon ilmatieteenlaitokselta?\n (K)yllä / muuten ei: ")
 if(value.lower() == "k"):
 	lueKannasta()
 
